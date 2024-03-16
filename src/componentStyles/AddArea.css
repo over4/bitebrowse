@@ -1,0 +1,66 @@
+/* Form container */
+
+.form-container {
+    margin: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: grey;
+  }
+  
+  /* Input fields styling to match Airbnb's theme */
+  .form-input {
+    width: 80%; /* Adjust the width as needed */
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #DDDDDD; /* Light gray border */
+    border-radius: 8px; /* Slightly rounded corners */
+    font-size: 16px;
+  }
+  
+  /* Styling for the submit button to match Airbnb's colors */
+  .form-submit-button {
+    width: 80%; /* Match input width for consistency */
+    padding: 15px;
+    background-color: #FF5A5F; /* Airbnb's shade of red */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Slightly rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold; /* Make the text a bit bolder */
+    transition: background-color 0.3s ease;
+    justify-self: center;
+  }
+  
+  .form-submit-button:hover {
+    background-color: #E45650; /* A darker shade of red for hover effect */
+  }
+  
+  /* Optional: Adjustments for the form's overall alignment and padding */
+  .form-container {
+    max-width: 75%; /* Max width for the form container */
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
+  }
+  .add-area{
+    width: 80%;
+    margin-top: 5%;
+  }
+
+  .add-area form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .delete-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }

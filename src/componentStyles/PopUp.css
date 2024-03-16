@@ -1,0 +1,36 @@
+.popUpParent{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.popUp{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "McLaren", cursive;
+    position: fixed;
+    min-width: 50%;
+    min-height: 25%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(192, 192, 192);
+    box-shadow: 0 10px 4px rgba(0,0,0,0.2);
+    border: 2px solid #333; /* Dark grey border */
+    padding: 20px;
+    z-index: 1000;
+}
+
+.popUp p{
+    font-family: "McLaren", cursive;
+    font-size: x-large;
+}
+.popUp button{
+    align-self: flex-end; 
+    margin-top: auto; 
+    max-height: fit-content;
+}

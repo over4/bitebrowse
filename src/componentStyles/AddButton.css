@@ -1,0 +1,26 @@
+.add-button-div {
+    background-color: #ffffff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-button{
+    background-color: var(--primary-color);
+    width: 3rem;
+    height: 3rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border: 0; 
+    transition: transform 0.3s ease; 
+}
+.add-button:hover{
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+}
+.add-button svg{
+    transform: scale(2.1);
+    color: white;
+}
+.add-button svg:hover{
+    cursor: pointer;
+}
