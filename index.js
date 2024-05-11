@@ -26,19 +26,24 @@ const geoip = require('geoip-lite');
 app.set('trust proxy', true);
 
 app.use((req, res, next) => {
-  if (!req.url.match(/\.(css|js|png|jpg|jpeg|gif|ico)$/)) { // Adjust the regex as needed
-    let ip = req.ip;
-    try{
-      const location = geoip.lookup(ip);
-      const country = JSON.stringify(location.country)
-      const city = JSON.stringify(location.city)
-      const region = JSON.stringify(location.region)
-      console.log(`Time: ${new Date().toLocaleTimeString()} IP: ${ip}, Country: ${country}, Region: ${region} City: ${city} URL: ${req.url}`);
-    }catch(e){
-      console.log(e)
+  try{
+    if (!req.url.match(/\.(css|js|png|jpg|jpeg|gif|ico)$/)) { // Adjust the regex as needed
+      let ip = req.ip;
+      try{
+        const location = geoip.lookup(ip);
+        const country = JSON.stringify(location.country)
+        const city = JSON.stringify(location.city)
+        const region = JSON.stringify(location.region)
+        console.log(`Time: ${new Date().toLocaleTimeString()} IP: ${ip}, Country: ${country}, Region: ${region} City: ${city} URL: ${req.url}`);
+      }catch(e){
+        console.log(e)
+      }
     }
+    next();
+  }catch(e){
+    console.log(e)
   }
-  next();
+  
 });
 
 
